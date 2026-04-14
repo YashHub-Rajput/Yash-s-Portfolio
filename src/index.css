@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #050810;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html:not(.dark) body {
+    background-color: #f5f7ff;
+    color: #0d1020;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #050810; }
+  ::-webkit-scrollbar-thumb { background: #4f8eff; border-radius: 2px; }
+}
+
+@layer components {
+  /* ── Glassmorphism ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+  }
+  html:not(.dark) .glass {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  /* ── Section pill tag ── */
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium;
+    background: rgba(79, 142, 255, 0.1);
+    color: #4f8eff;
+    border: 0.5px solid rgba(79, 142, 255, 0.25);
+  }
+
+  /* ── Gradient text ── */
+  .gradient-text {
+    background: linear-gradient(135deg, #4f8eff 0%, #7c5cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm cursor-pointer transition-all duration-300;
+    background: linear-gradient(135deg, #4f8eff 0%, #7c5cff 100%);
+    box-shadow: 0 0 20px rgba(79, 142, 255, 0.2);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(79, 142, 255, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-300;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+  }
+  .btn-secondary:hover {
+    color: #4f8eff;
+    border-color: rgba(79, 142, 255, 0.4);
+    background: rgba(79, 142, 255, 0.05);
+    transform: translateY(-2px);
+  }
+  html:not(.dark) .btn-secondary {
+    color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  /* ── Skill badge ── */
+  .skill-badge {
+    @apply px-3 py-1.5 rounded-lg text-xs font-medium cursor-default transition-all duration-200;
+  }
+  .skill-badge:hover {
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  /* Subtle grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(79, 142, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 142, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Glow orb */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  /* Custom opacity utilities that Tailwind doesn't generate */
+  .bg-white\/8  { background-color: rgba(255, 255, 255, 0.08); }
+  .bg-black\/8  { background-color: rgba(0, 0, 0, 0.08); }
+  .hover\:bg-white\/8:hover { background-color: rgba(255, 255, 255, 0.08); }
+  .hover\:bg-black\/8:hover { background-color: rgba(0, 0, 0, 0.08); }
+
+  /* Brand utility bg + text */
+  .bg-brand-blue\/5    { background-color: rgba(79, 142, 255, 0.05); }
+  .bg-brand-blue\/8    { background-color: rgba(79, 142, 255, 0.08); }
+  .bg-brand-blue\/10   { background-color: rgba(79, 142, 255, 0.10); }
+  .bg-brand-blue\/12   { background-color: rgba(79, 142, 255, 0.12); }
+  .bg-brand-blue\/15   { background-color: rgba(79, 142, 255, 0.15); }
+
+  .bg-brand-purple\/5  { background-color: rgba(124, 92, 255, 0.05); }
+  .bg-brand-purple\/6  { background-color: rgba(124, 92, 255, 0.06); }
+  .bg-brand-purple\/8  { background-color: rgba(124, 92, 255, 0.08); }
+  .bg-brand-purple\/10 { background-color: rgba(124, 92, 255, 0.10); }
+
+  .bg-brand-teal\/5    { background-color: rgba(0, 212, 170, 0.05); }
+  .bg-brand-teal\/6    { background-color: rgba(0, 212, 170, 0.06); }
+  .bg-brand-teal\/8    { background-color: rgba(0, 212, 170, 0.08); }
+  .bg-brand-teal\/10   { background-color: rgba(0, 212, 170, 0.10); }
+
+  .bg-orange-400\/8    { background-color: rgba(251, 146, 60, 0.08); }
+  .bg-green-400\/8     { background-color: rgba(74, 222, 128, 0.08); }
+  .bg-pink-400\/8      { background-color: rgba(244, 114, 182, 0.08); }
+  .bg-yellow-400\/8    { background-color: rgba(250, 204, 21, 0.08); }
+
+  .border-brand-blue\/15  { border-color: rgba(79, 142, 255, 0.15); }
+  .border-brand-blue\/20  { border-color: rgba(79, 142, 255, 0.20); }
+  .border-brand-blue\/25  { border-color: rgba(79, 142, 255, 0.25); }
+  .border-brand-blue\/30  { border-color: rgba(79, 142, 255, 0.30); }
+  .border-brand-blue\/40  { border-color: rgba(79, 142, 255, 0.40); }
+  .border-brand-blue\/50  { border-color: rgba(79, 142, 255, 0.50); }
+
+  .border-brand-purple\/20 { border-color: rgba(124, 92, 255, 0.20); }
+  .border-brand-purple\/25 { border-color: rgba(124, 92, 255, 0.25); }
+  .border-brand-teal\/20   { border-color: rgba(0, 212, 170, 0.20); }
+  .border-brand-teal\/25   { border-color: rgba(0, 212, 170, 0.25); }
+  .border-brand-teal\/40   { border-color: rgba(0, 212, 170, 0.40); }
+  .border-orange-400\/20   { border-color: rgba(251, 146, 60, 0.20); }
+  .border-green-400\/20    { border-color: rgba(74, 222, 128, 0.20); }
+  .border-pink-400\/20     { border-color: rgba(244, 114, 182, 0.20); }
+  .border-yellow-400\/20   { border-color: rgba(250, 204, 21, 0.20); }
+  .border-yellow-400\/40   { border-color: rgba(250, 204, 21, 0.40); }
+
+  .text-brand-blue   { color: #4f8eff; }
+  .text-brand-purple { color: #7c5cff; }
+  .text-brand-teal   { color: #00d4aa; }
+
+  /* Light mode text overrides */
+  html:not(.dark) .text-white    { color: #0d1020; }
+  html:not(.dark) .text-white\/80 { color: rgba(13, 16, 32, 0.8); }
+  html:not(.dark) .text-white\/65 { color: rgba(13, 16, 32, 0.65); }
+  html:not(.dark) .text-white\/60 { color: rgba(13, 16, 32, 0.6); }
+  html:not(.dark) .text-white\/55 { color: rgba(13, 16, 32, 0.55); }
+  html:not(.dark) .text-white\/50 { color: rgba(13, 16, 32, 0.5); }
+  html:not(.dark) .text-white\/45 { color: rgba(13, 16, 32, 0.45); }
+  html:not(.dark) .text-white\/40 { color: rgba(13, 16, 32, 0.4); }
+  html:not(.dark) .text-white\/30 { color: rgba(13, 16, 32, 0.3); }
+  html:not(.dark) .text-white\/25 { color: rgba(13, 16, 32, 0.25); }
+}
