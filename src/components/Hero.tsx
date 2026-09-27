@@ -3,10 +3,11 @@ import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
 import { personalInfo } from '../data/portfolio'
 
 const roles = [
-  'Full Stack Developer',
-  'MERN Stack Engineer',
-  'Problem Solver',
-  'Open Source Builder',
+  'Software Developer',
+  'Python Backend Engineer',
+  'Data & Observability',
+  'Full‑Stack Developer',
+  'Reliable Systems',
 ]
 
 export default function Hero() {
@@ -66,15 +67,15 @@ export default function Hero() {
           {/* Left — Text */}
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
             {/* Tag */}
-            <div
-              className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-              style={{ transitionDelay: '0ms' }}
-            >
-              <span className="section-tag mb-6 inline-flex">
-                <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-                Available for Internships & Placements
-              </span>
-            </div>
+              <div
+                className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                style={{ transitionDelay: '0ms' }}
+              >
+                <span className="section-tag mb-6 inline-flex">
+                  <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+                  Software Developer — White Feather Consultancy
+                </span>
+              </div>
 
             {/* Name */}
             <div
@@ -130,7 +131,7 @@ export default function Hero() {
                 </button>
                 <a
                   href={personalInfo.resumeUrl}
-                  download="YashRajput-Resume2026.pdf"
+                  download="Yash_Rajput_Resume.pdf"
                   className="btn-secondary"
                 >
                   Download Resume
@@ -215,9 +216,9 @@ export default function Hero() {
                 🎖 NCC C-Cert · Grade A
               </div>
 
-              {/* Floating badge — CGPA */}
+              {/* Floating badge — Employment */}
               <div className="absolute -top-2 -right-8 glass px-3 py-2 rounded-xl text-xs font-medium text-white/80 border border-white/15 shadow-card z-20 animate-float" style={{ animationDelay: '2s' }}>
-                🎓 CGPA 7.7 · CSE
+                💼 Software Developer · White Feather Consultancy
               </div>
             </div>
           </div>

@@ -3,10 +3,10 @@ import { personalInfo, education } from '../data/portfolio'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const stats = [
-  { label: 'Projects Shipped',   value: '5+',  icon: '🚀' },
-  { label: 'Tech Stack',         value: '15+', icon: '⚡' },
-  { label: 'CGPA',               value: '7.7', icon: '🎓' },
-  { label: 'Certifications',     value: '4+',  icon: '🏅' },
+  { label: 'Projects Shipped', value: '5+', icon: '🚀' },
+  { label: 'Tools & Libraries', value: '15+', icon: '⚡' },
+  { label: 'Professional Experience', value: 'Since 2026', icon: '💼' },
+  { label: 'Certifications', value: '4+', icon: '🏅' },
 ]
 
 export default function About() {
@@ -32,26 +32,20 @@ export default function About() {
           <div className={`transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="space-y-5 text-white/65 leading-relaxed font-dm text-[17px]">
               <p>
-                <span className="text-white font-medium">From NCC drills to MERN stack builds</span> — I'm
-                a Computer Science Engineering student at IES College of Technology, Bhopal
-                with a CGPA of 7.7, and a relentless drive to build things that matter.
+                <span className="text-white font-medium">Software Developer focused on building reliable systems</span> — I work on Python backend components, data
+                ingestion and validation pipelines, and observability tooling for distributed systems.
               </p>
               <p>
-                I specialize in <span className="text-brand-blue">full-stack web development</span> with
-                the MERN stack, and have a solid foundation in{' '}
-                <span className="text-brand-purple">Data Structures & Algorithms</span> in Java.
-                I've shipped AI-powered security platforms, real-world election systems,
-                and developer productivity tools.
+                I combine backend engineering with full-stack experience to deliver
+                well-tested, maintainable services. My work emphasises strong testing,
+                data correctness, and pragmatic automation that helps teams move faster.
               </p>
               <p>
-                What I may lack in years of experience, I make up with{' '}
-                <span className="text-brand-teal">structured thinking, discipline</span>, and
-                a willingness to dive into any challenge. Technology excites me — and I'm
-                constantly amazed by the change it brings to the world.
+                I also integrate GenAI APIs and AI-assisted workflows to accelerate
+                development, while reviewing outputs and validating behavior before
+                they reach production.
               </p>
-              <p className="text-white/40 text-sm italic">
-                Outside tech: photography, dancing, fitness & athletics. Always moving.
-              </p>
+              <p className="text-white/40 text-sm italic">Outside tech: photography, dancing, fitness & athletics.</p>
             </div>
 
             {/* Location + quick info */}
@@ -61,17 +55,17 @@ export default function About() {
                 {personalInfo.location}
               </div>
               <div className="flex items-center gap-2 text-white/40 text-sm">
-                <GraduationCap size={14} className="text-brand-purple" />
-                B.Tech CSE · 2026
-              </div>
-              <div className="flex items-center gap-2 text-white/40 text-sm">
-                <Code2 size={14} className="text-brand-teal" />
-                MERN Stack
-              </div>
-              <div className="flex items-center gap-2 text-white/40 text-sm">
-                <Zap size={14} className="text-yellow-400" />
-                Open to opportunities
-              </div>
+                  <GraduationCap size={14} className="text-brand-purple" />
+                  B.Tech in Computer Science & Engineering · 2026
+                </div>
+                <div className="flex items-center gap-2 text-white/40 text-sm">
+                  <Code2 size={14} className="text-brand-teal" />
+                  Python backend · Full-stack
+                </div>
+                <div className="flex items-center gap-2 text-white/40 text-sm">
+                  <Zap size={14} className="text-yellow-400" />
+                  Software Developer — White Feather Consultancy (Jun 2026 – Present)
+                </div>
             </div>
 
             {/* Stats Grid */}
@@ -89,6 +83,19 @@ export default function About() {
                   <div className="text-white/40 text-xs mt-1">{stat.label}</div>
                 </div>
               ))}
+            </div>
+
+            {/* AI-assisted engineering */}
+            <div className="mt-6">
+              <div className="glass rounded-2xl p-4">
+                <h4 className="font-syne font-semibold text-white text-[15px] mb-2">AI-assisted engineering</h4>
+                <ul className="text-white/60 text-sm space-y-1">
+                  <li>OpenCode workflows with Claude, GPT, and Kimi agents.</li>
+                  <li>Codex and GitHub Copilot for iterative coding and reviews.</li>
+                  <li>Claude Code/CLI for observability and automation tasks.</li>
+                  <li>Reusable prompts and small libraries to speed exploration and testing.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -123,9 +130,11 @@ export default function About() {
                         <h4 className="font-syne font-semibold text-white text-[15px] leading-snug">
                           {edu.degree}
                         </h4>
-                        <span className="text-xs font-medium text-brand-teal bg-brand-teal/10 px-2 py-0.5 rounded-full border border-brand-teal/20 whitespace-nowrap">
-                          {edu.score}
-                        </span>
+                        {edu.score && (
+                          <span className="text-xs font-medium text-brand-teal bg-brand-teal/10 px-2 py-0.5 rounded-full border border-brand-teal/20 whitespace-nowrap">
+                            {edu.score}
+                          </span>
+                        )}
                       </div>
                       <p className="text-white/50 text-sm mt-1">{edu.institution}</p>
                       <p className="text-white/30 text-xs mt-1">{edu.year}</p>

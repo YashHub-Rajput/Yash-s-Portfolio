@@ -4,54 +4,54 @@
 
 export const personalInfo = {
   name: 'Yash Rajput',
-  role: 'Full Stack Developer',
-  tagline: 'I build scalable and intelligent web applications.',
-  bio: `From NCC drills to MERN stack builds — discipline meets development.
-I'm a Computer Science Engineering student at IES College of Technology, Bhopal
-(CGPA: 7.7), with a strong grip on full-stack development, DSA, and
-building real-world products that make an impact.`,
-  bioExtra: `What I may lack in years of experience, I make up with determination,
-structured thinking, and a relentless drive to learn. I've shipped AI-powered
-platforms, full-stack election systems, and developer tools — and I'm just getting started.`,
+  role: 'Software Developer',
+  tagline: 'Python backend developer focused on data processing, observability, and reliable systems.',
+  bio: `From NCC drills to production services — discipline meets development.
+I work as a Software Developer building Python backend components, data ingestion
+and validation pipelines, and observability tooling for distributed systems. I also
+build full-stack projects and AI-assisted tooling in my personal work.`,
+  bioExtra: `I focus on reliable software: strong testing, pragmatic design, and
+clear collaboration. I integrate GenAI APIs to accelerate engineering workflows
+while validating outputs and maintaining correctness in production systems.`,
   email: 'yash.rajput2194@gmail.com',
   phone: '+91 9926391141',
   location: 'Bhopal, Madhya Pradesh',
   github: 'https://github.com/YashHub-Rajput',
   linkedin: 'https://www.linkedin.com/in/yash-rajput21/',
-  resumeUrl: '/YashRajput-Resume2026.pdf',
+  // Resume is served from the public folder at root for stable asset URL.
+  resumeUrl: '/Yash_Rajput_Resume.pdf',
   photo: '/Yash%20Rajput%20photo.jpg',
 }
-
 export const skills = [
-  {
-    category: 'Frontend',
-    color: 'blue' as const,
-    items: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3'],
-  },
-  {
-    category: 'Backend',
-    color: 'purple' as const,
-    items: ['Node.js', 'Express.js', 'RESTful APIs', 'MongoDB', 'Mongoose', 'Oracle', 'MySQL'],
-  },
   {
     category: 'Languages',
     color: 'teal' as const,
-    items: ['Java', 'Python', 'C++', 'C'],
+    items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'],
   },
   {
-    category: 'Tools & Platforms',
+    category: 'Backend & Data',
+    color: 'purple' as const,
+    items: ['REST APIs', 'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Mongoose', 'PyMongo', 'Pydantic', 'JSON Schema'],
+  },
+  {
+    category: 'Frontend',
+    color: 'blue' as const,
+    items: ['React.js', 'Next.js', 'Tailwind CSS', 'TanStack Query'],
+  },
+  {
+    category: 'Cloud & Delivery',
     color: 'orange' as const,
-    items: ['Git', 'GitHub', 'Figma', 'Canva', 'Vercel', 'Render', 'Postman', 'VS Code'],
+    items: ['AWS', 'Terraform', 'Docker', 'Git', 'GitHub', 'GitLab CI/CD', 'Vercel', 'Render'],
   },
   {
-    category: 'Core CS',
+    category: 'Observability & Quality',
     color: 'green' as const,
-    items: ['Data Structures', 'Algorithms', 'OOP', 'DBMS', 'OS Fundamentals'],
+    items: ['OpenTelemetry', 'Prometheus', 'Grafana', 'Tempo', 'Pytest', 'Integration Testing', 'UAT'],
   },
   {
-    category: 'Soft Skills',
+    category: 'AI & Productivity',
     color: 'pink' as const,
-    items: ['Leadership', 'Communication', 'Teamwork', 'Critical Thinking', 'Time Management'],
+    items: ['GenAI API Integration', 'Groq/LLaMA', 'AI-assisted coding', 'Prompt Engineering'],
   },
 ]
 
@@ -113,6 +113,44 @@ export const projects = [
     badge: 'Travel Tech',
     featured: false,
   },
+  {
+    id: 4,
+    title: 'Telemetry Hub',
+    tagline: 'Cloud observability & infrastructure discovery (professional)',
+    description:
+      'Professional contribution to backend telemetry processing, infrastructure discovery, and asset correlation. Worked on ingestion pipelines, device-identity mapping, tenant-scoped processing, and troubleshooting across distributed environments.',
+    highlights: [
+      'Telemetry ingestion & correlation',
+      'Asset/discovery pipeline contributions',
+      'Tenant-scoped processing and troubleshooting',
+      'Automated testing and deployment verification',
+    ],
+    tech: ['Python', 'PostgreSQL', 'AWS', 'Terraform', 'Docker', 'OpenTelemetry', 'Prometheus', 'Grafana', 'Tempo'],
+    accent: '#ff8a65',
+    liveUrl: '#',
+    githubUrl: '#',
+    badge: 'Professional',
+    featured: false,
+  },
+  {
+    id: 5,
+    title: 'Financial Data Processing',
+    tagline: 'Data ingestion & validation platform (professional)',
+    description:
+      'Contributed to financial-data ingestion, transformation, schema validation, and reconciliation. Improved validation pipelines, field mappings, and assisted UAT/regression verification.',
+    highlights: [
+      'Schema-driven validation (Pydantic / JSON Schema)',
+      'Ingestion & writer script improvements',
+      'Investigation of invalid records and runtime failures',
+      'UAT, regression testing and reconciliation',
+    ],
+    tech: ['Python', 'MongoDB', 'PyMongo', 'Pydantic', 'JSON Schema', 'AMPS', 'GitLab CI/CD'],
+    accent: '#a78bfa',
+    liveUrl: '#',
+    githubUrl: '#',
+    badge: 'Professional',
+    featured: false,
+  },
 ]
 
 export const education = [
@@ -120,7 +158,6 @@ export const education = [
     degree: 'B.Tech — Computer Science Engineering',
     institution: 'IES College of Technology, Bhopal',
     year: '2022 – 2026',
-    score: 'CGPA: 7.7',
   },
   {
     degree: 'Class XII — CBSE',

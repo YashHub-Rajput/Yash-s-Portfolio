@@ -81,7 +81,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
             </button>
             <a
               href={personalInfo.resumeUrl}
-              download="YashRajput-Resume2026.pdf"
+              download="Yash_Rajput_Resume.pdf"
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-brand-blue text-white hover:bg-brand-blue/80 hover:-translate-y-0.5 transition-all duration-200 shadow-glow-blue"
             >
               <Download size={14} />
@@ -136,7 +136,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           </ul>
           <a
             href={personalInfo.resumeUrl}
-            download="YashRajput-Resume2026.pdf"
+            download="Yash_Rajput_Resume.pdf"
             className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-medium bg-brand-blue text-white"
           >
             <Download size={14} />
